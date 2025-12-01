@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<templates xml:space="preserve">
+
+    <t t-inherit="web.SearchBarMenu" t-inherit-mode="extension" t-name="custom_model_access_management.SearchBarMenu.Inherit">
+       <xpath expr="//div[contains(@class, 'o_filter_menu')]" position="attributes">
+            <attribute name="t-if">!this.env.config.custom_active_Action.hide_filter_section</attribute>
+       </xpath>
+       <xpath expr="//div[contains(@class, 'o_group_by_menu')]" position="attributes">
+            <attribute name="t-if">!this.env.config.custom_active_Action.hide_group_by_section</attribute>
+       </xpath>
+       <xpath expr="//div[contains(@class, 'o_favorite_menu')]" position="attributes">
+            <attribute name="t-if">!this.env.config.custom_active_Action.hide_favorites_section</attribute>
+       </xpath>
+    </t>
+
+</templates>
+

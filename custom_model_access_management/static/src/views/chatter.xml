@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<templates xml:space="preserve">
+    <t t-inherit="mail.Chatter" t-inherit-mode="extension" t-name="ChatterInherit">
+        <xpath expr="//div[hasclass('o-mail-Chatter')]" position="attributes">
+            <attribute name="t-if">state.thread and !props.hide_chatter_section</attribute>
+        </xpath>
+        <xpath expr="//div/div/div/t/button[hasclass('o-mail-Chatter-sendMessage')]" position="attributes">
+            <attribute name="t-if">!props.hide_send_mssge</attribute>
+        </xpath>
+        <xpath expr="//div/div/div/t/button[hasclass('o-mail-Chatter-logNote')]" position="attributes">
+            <attribute name="t-if">!props.hide_log_note</attribute>
+        </xpath>
+    </t>
+    <t t-inherit="mail.Chatter.attachFiles" t-inherit-mode="extension" t-name="ChatterattachFilesInherit">
+        <xpath expr="//button[hasclass('o-mail-Chatter-attachFiles')]" position="attributes">
+            <attribute name="t-if">!props.hide_attachment</attribute>
+        </xpath>
+    </t>
+    <t t-inherit="mail.Composer.attachFiles" t-inherit-mode="extension" t-name="mailComposerattachFilesInherit">
+        <xpath expr="//FileUploader/t/button" position="attributes">
+            <attribute name="t-if">!ChatterAccess.hide_attachment</attribute>
+        </xpath>
+    </t>
+    <t t-inherit="mail.Composer.sendButton" t-inherit-mode="extension" t-name="mailComposersendButtonInherit">
+        <xpath expr="//button" position="attributes">
+            <attribute name="t-if">!ChatterAccess.hide_send_mssge</attribute>
+        </xpath>
+    </t>
+
+</templates>

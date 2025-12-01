@@ -1,0 +1,4 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_model_access_right_user,access.model_access.right.user,model_model_access_right,,1,1,1,1
+access_model_header_button,access.model_header_button,model_model_header_button,,1,1,1,1
+access_model_notebook_page,access.model_notebook_page,model_model_notebook_page,,1,1,1,1

@@ -1,0 +1,858 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+</head>
+
+<body>
+    <div class="f-title text-center mb-4">
+        <h2 style="font-family:'Inter', sans-serif; font-size:40px; line-height:50px; font-weight:700; color:#151765; margin-bottom:10px;">
+            Overview
+        </h2>
+        <p style="font-family:'Inter', sans-serif; font-size:18px; line-height:28px; font-weight:400; color:#333; max-width:900px; margin:0 auto;">
+            This module provides a centralized, advanced access control system that allows management to precisely
+            control what each user can see and do inside the System.
+            It enhances security, reduces human error, and ensures that users only interact with data and actions
+            relevant to their role.
+        </p>
+    </div>
+
+
+    <div class="benifits_content" style="margin-top:50px">
+        <h1 style="font-family:'Inter', sans-serif; font-size:35px; line-height:42px; font-weight:700; color:#151765; margin-bottom:0 !important; text-align:center">
+            Benefits of Access management
+        </h1>
+
+                                            <div class="d-flex align-items-start mt-4">
+                                                <div class="arrow-img">
+                                                    <img src="./assets/screenshots/right_arrow.png" class="img img-fluid img-responsible" style="max-width: 20px;">
+                                                </div>
+                                                <div class="set-cont">
+                                                    <p style="font-family:'Inter', sans-serif; font-size:18px; line-height:26px; font-weight:500; color:#4f4f4f; margin-left:20px; margin-bottom:0 !important">
+                                                        Improves Data Security : Users only see and access what they are authorized to—reducing the risk of data misuse or leakage.
+                                                    </p>
+                                                </div>
+                                            </div>
+
+                                            <div class="d-flex align-items-start mt-2">
+                                                <div class="arrow-img">
+                                                    <img src="./assets/screenshots/right_arrow.png" class="img img-fluid img-responsible" style="max-width: 20px;">
+                                                </div>
+                                                <div class="set-cont">
+                                                    <p style="font-family:'Inter', sans-serif; font-size:18px; line-height:26px; font-weight:500; color:#4f4f4f; margin-left:20px; margin-bottom:0 !important">
+                                                        Reduces Human Errors : By hiding unwanted actions like Delete, Edit, or Import, accidental mistakes on critical records are prevented.
+                                                    </p>
+                                                </div>
+                                            </div>
+
+                                            <div class="d-flex align-items-start mt-2">
+                                                <div class="arrow-img">
+                                                    <img src="./assets/screenshots/right_arrow.png" class="img img-fluid img-responsible" style="max-width: 20px;">
+                                                </div>
+                                                <div class="set-cont">
+                                                    <p style="font-family:'Inter', sans-serif; font-size:18px; line-height:26px; font-weight:500; color:#4f4f4f; margin-left:20px; margin-bottom:0 !important">
+                                                        Centralized Control for Admins : All access rules can be managed from one place without changing system code.                                                    </p>
+                                                </div>
+                                            </div>
+
+                                            <div class="d-flex align-items-start mt-2">
+                                                <div class="arrow-img">
+                                                    <img src="./assets/screenshots/right_arrow.png" class="img img-fluid img-responsible" style="max-width: 20px;">
+                                                </div>
+                                                <div class="set-cont">
+                                                    <p style="font-family:'Inter', sans-serif; font-size:18px; line-height:26px; font-weight:500; color:#4f4f4f; margin-left:20px; margin-bottom:0 !important">
+                                                       Increases Operational Discipline : Users follow proper business processes since restricted actions cannot be bypassed.
+                                                    </p>
+                                                </div>
+                                            </div>
+
+                                            <div class="d-flex align-items-start mt-2">
+                                                <div class="arrow-img">
+                                                    <img src="./assets/screenshots/right_arrow.png" class="img img-fluid img-responsible" style="max-width: 20px;">
+                                                </div>
+                                                <div class="set-cont">
+                                                    <p style="font-family:'Inter', sans-serif; font-size:18px; line-height:26px; font-weight:500; color:#4f4f4f; margin-left:20px; margin-bottom:0 !important">
+                                                        Saves Time for IT & Support Teams : No need for repeated technical changes or custom development for every new restriction.
+                                                    </p>
+                                                </div>
+                                            </div>
+
+                                            <div class="d-flex align-items-start mt-2">
+                                                <div class="arrow-img">
+                                                    <img src="./assets/screenshots/right_arrow.png" class="img img-fluid img-responsible" style="max-width: 20px;">
+                                                </div>
+                                                <div class="set-cont">
+                                                    <p style="font-family:'Inter', sans-serif; font-size:18px; line-height:26px; font-weight:500; color:#4f4f4f; margin-left:20px; margin-bottom:0 !important">
+                                                        Restrict user access permissions to prevent specified users from seeing any module's navigation menus and submenus.
+                                                    </p>
+                                                </div>
+                                            </div>
+
+                                            <div class="d-flex align-items-start mt-2">
+                                                <div class="arrow-img">
+                                                    <img src="./assets/screenshots/right_arrow.png" class="img img-fluid img-responsible" style="max-width: 20px;">
+                                                </div>
+                                                <div class="set-cont">
+                                                    <p style="font-family:'Inter', sans-serif; font-size:18px; line-height:26px; font-weight:500; color:#4f4f4f; margin-left:20px; margin-bottom:0 !important">
+                                                        Enhances Compliance & Audit Readiness : Helps meet audit requirements by limiting sensitive operations like Export, Print, and Attachments.
+                                                    </p>
+                                                </div>
+                                            </div>
+
+                                            <div class="d-flex align-items-start mt-2">
+                                                <div class="arrow-img">
+                                                    <img src="./assets/screenshots/right_arrow.png" class="img img-fluid img-responsible" style="max-width: 20px;">
+                                                </div>
+                                                <div class="set-cont">
+                                                    <p style="font-family:'Inter', sans-serif; font-size:18px; line-height:26px; font-weight:500; color:#4f4f4f; margin-left:20px; margin-bottom:0 !important">
+                                                        Prevents users from uploading incorrect data through Import or Attach options.
+                                                    </p>
+                                                </div>
+                                            </div>
+                                        </div>
+
+    <!-- Request Demo Section -->
+    <div class="text-center" style="margin-top:50px;">
+    <a href="mailto:odoodevs8068@gmail.com"
+       class="btn"
+       style="
+            display:inline-block;
+            background:#151765;
+            color:#fff;
+            font-family:'Inter', sans-serif;
+            font-size:20px;
+            font-weight:600;
+            padding:16px 50px;
+            border-radius:8px;
+            text-decoration:none;
+            box-shadow:0 8px 20px rgba(0,0,0,0.2);
+            transition:all 0.3s ease;
+       "
+       onmouseover="this.style.background='#0f1150'"
+       onmouseout="this.style.background='#151765'">
+        <i class="fa fa-envelope" style="margin-right:10px;"></i>
+        Request For Demo
+    </a>
+
+    <p style="
+        margin-top:12px;
+        font-family:'Inter', sans-serif;
+        font-size:14px;
+        color:#666;">
+        Contact us to schedule a live demonstration of this module
+    </p>
+</div>
+
+
+    <div class="row justify-content-center mb-5">
+        <div class="col-xl-10 col-lg-11 col-md-12">
+             <div class="f-title text-left">
+                <h2 style="font-family:'Inter', sans-serif; font-size:45px; line-height:54px; font-weight:700; color:#151765; margin-bottom:0 !important">
+                    It supports Five access types:
+                </h2>
+            </div>
+            <ul style="font-family:'Inter', sans-serif; font-size:18px; line-height:30px; color:#151765;">
+                <li><strong>User-Model specific control</strong></li>
+                <li><strong>Global control for a specific model</strong></li>
+                <li><strong>Export fields & template restrictions</strong></li>
+                <li><strong>Global settings hide controls</strong></li>
+                <li><strong>Main Menu & Sub-Menu restrictions</strong></li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="" style="margin-top:10px">
+            <div class="f-title text-center">
+                <h2 style="font-family:'Inter', sans-serif; font-size:45px; line-height:54px; font-weight:700; color:#151765; margin-bottom:0 !important">
+                    It controls
+                </h2>
+            </div>
+
+            <div class="row justify-content-around align-items-center mt-4 mb-4">
+                    <div  class="col-xl-4 col-lg-4 col-md-6 col-sm-12 my-2">
+                        <div class="tabs shadow"
+                         style="padding:10px 15px; background-color: #1b672c; border-radius:6px">
+                        <div class="d-flex align-items-center">
+                            <h6 style="font-family:'Inter', sans-serif; font-size:19px; line-height:25px; font-weight:600; color: #ffffff;margin-bottom:0px !important; margin-left:12px">
+                                Restrict Create
+                            </h6>
+                        </div>
+                    </div>
+                    </div>
+
+                <div class="col-xl-4 col-lg-4 col-md-6 col-sm-12 my-2">
+                    <div class="tabs shadow"
+                         style="padding:10px 15px; background-color: #1b672c; border-radius:6px">
+                        <div class="d-flex align-items-center">
+                            <h6 style="font-family:'Inter', sans-serif; font-size:19px; line-height:25px; font-weight:600; color: #ffffff;margin-bottom:0px !important; margin-left:12px">
+                                Restrict Edit
+                            </h6>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-xl-4 col-lg-4 col-md-6 col-sm-12 my-2">
+                    <div class="tabs shadow"
+                         style="padding:10px 15px; background-color: #1b672c; border-radius:6px">
+                        <div class="d-flex align-items-center">
+                            <h6 style="font-family:'Inter', sans-serif; font-size:19px; line-height:25px; font-weight:600; color: #ffffff;margin-bottom:0px !important; margin-left:12px">
+                                Restrict Delete
+                            </h6>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-xl-4 col-lg-4 col-md-6 col-sm-12 my-2">
+                    <div class="tabs shadow"
+                         style="padding:10px 15px; background-color: #1b672c; border-radius:6px">
+                        <div class="d-flex align-items-center">
+                            <h6 style="font-family:'Inter', sans-serif; font-size:19px; line-height:25px; font-weight:600; color: #ffffff;margin-bottom:0px !important; margin-left:12px">
+                                Restrict Duplicate
+                            </h6>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-xl-4 col-lg-4 col-md-6 col-sm-12 my-2">
+                    <div class="tabs shadow"
+                         style="padding:10px 15px; background-color: #1b672c; border-radius:6px">
+                        <div class="d-flex align-items-center">
+                            <h6 style="font-family:'Inter', sans-serif; font-size:19px; line-height:25px; font-weight:600; color: #ffffff;margin-bottom:0px !important; margin-left:12px">
+                                Restrict Export
+                            </h6>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-xl-4 col-lg-4 col-md-6 col-sm-12 my-2">
+                    <div class="tabs shadow"
+                         style="padding:10px 15px; background-color: #1b672c; border-radius:6px">
+                        <div class="d-flex align-items-center">
+                            <h6 style="font-family:'Inter', sans-serif; font-size:19px; line-height:25px; font-weight:600; color: #ffffff;margin-bottom:0px !important; margin-left:12px">
+                                Restrict Add a Properties
+                            </h6>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-xl-4 col-lg-4 col-md-6 col-sm-12 my-2">
+                    <div class="tabs shadow"
+                         style="padding:10px 15px; background-color: #1b672c; border-radius:6px">
+                        <div class="d-flex align-items-center">
+                            <h6 style="font-family:'Inter', sans-serif; font-size:19px; line-height:25px; font-weight:600; color: #ffffff;margin-bottom:0px !important; margin-left:12px">
+                                Restrict Archive/UnArchive
+                            </h6>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-xl-4 col-lg-4 col-md-6 col-sm-12 my-2">
+                    <div class="tabs shadow"
+                         style="padding:10px 15px; background-color: #1b672c; border-radius:6px">
+                        <div class="d-flex align-items-center">
+                            <h6 style="font-family:'Inter', sans-serif; font-size:19px; line-height:25px; font-weight:600; color: #ffffff;margin-bottom:0px !important; margin-left:12px">
+                                Restrict Import / Upload
+                            </h6>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-xl-4 col-lg-4 col-md-6 col-sm-12 my-2">
+                    <div class="tabs shadow"
+                         style="padding:10px 15px; background-color: #1b672c; border-radius:6px">
+                        <div class="d-flex align-items-center">
+                            <h6 style="font-family:'Inter', sans-serif; font-size:19px; line-height:25px; font-weight:600; color: #ffffff;margin-bottom:0px !important; margin-left:12px">
+                                Add / Remove Attachment Preview
+                            </h6>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-xl-4 col-lg-4 col-md-6 col-sm-12 my-2">
+                    <div class="tabs shadow"
+                         style="padding:10px 15px; background-color: #1b672c; border-radius:6px">
+                        <div class="d-flex align-items-center">
+                            <h6 style="font-family:'Inter', sans-serif; font-size:19px; line-height:25px; font-weight:600; color: #ffffff;margin-bottom:0px !important; margin-left:12px">
+                                Restrict Export Fields
+                            </h6>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-xl-4 col-lg-4 col-md-6 col-sm-12 my-2">
+                    <div class="tabs shadow"
+                         style="padding:10px 15px; background-color: #1b672c; border-radius:6px">
+                        <div class="d-flex align-items-center">
+                            <h6 style="font-family:'Inter', sans-serif; font-size:19px; line-height:25px; font-weight:600; color: #ffffff;margin-bottom:0px !important; margin-left:12px">
+                                Restrict Export Templates
+                            </h6>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-xl-4 col-lg-4 col-md-6 col-sm-12 my-2">
+                    <div class="tabs shadow"
+                         style="padding:10px 15px; background-color: #1b672c; border-radius:6px">
+                        <div class="d-flex align-items-center">
+                            <h6 style="font-family:'Inter', sans-serif; font-size:19px; line-height:25px; font-weight:600; color: #ffffff;margin-bottom:0px !important; margin-left:12px">
+                                Restrict Model Field
+                            </h6>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-xl-4 col-lg-4 col-md-6 col-sm-12 my-2">
+                    <div class="tabs shadow"
+                         style="padding:10px 15px; background-color: #1b672c; border-radius:6px">
+                        <div class="d-flex align-items-center">
+                            <h6 style="font-family:'Inter', sans-serif; font-size:19px; line-height:25px; font-weight:600; color: #ffffff;margin-bottom:0px !important; margin-left:12px">
+                                Restrict Header Button, Button Box
+                            </h6>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-xl-4 col-lg-4 col-md-6 col-sm-12 my-2">
+                    <div class="tabs shadow"
+                         style="padding:10px 15px; background-color: #1b672c; border-radius:6px">
+                        <div class="d-flex align-items-center">
+                            <h6 style="font-family:'Inter', sans-serif; font-size:19px; line-height:25px; font-weight:600; color: #ffffff;margin-bottom:0px !important; margin-left:12px">
+                                Restrict Kanban Links
+                            </h6>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-xl-4 col-lg-4 col-md-6 col-sm-12 my-2">
+                    <div class="tabs shadow"
+                         style="padding:10px 15px; background-color: #1b672c; border-radius:6px">
+                        <div class="d-flex align-items-center">
+                            <h6 style="font-family:'Inter', sans-serif; font-size:19px; line-height:25px; font-weight:600; color: #ffffff;margin-bottom:0px !important; margin-left:12px">
+                                Restrict Server Action
+                            </h6>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-xl-4 col-lg-4 col-md-6 col-sm-12 my-2">
+                    <div class="tabs shadow"
+                         style="padding:10px 15px; background-color: #1b672c; border-radius:6px">
+                        <div class="d-flex align-items-center">
+                            <h6 style="font-family:'Inter', sans-serif; font-size:19px; line-height:25px; font-weight:600; color: #ffffff;margin-bottom:0px !important; margin-left:12px">
+                                Restrict Report  &amp; Actions
+                            </h6>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-xl-4 col-lg-4 col-md-6 col-sm-12 my-2">
+                    <div class="tabs shadow"
+                         style="padding:10px 15px; background-color: #1b672c; border-radius:6px">
+                        <div class="d-flex align-items-center">
+                            <h6 style="font-family:'Inter', sans-serif; font-size:19px; line-height:25px; font-weight:600; color: #ffffff;margin-bottom:0px !important; margin-left:12px">
+                                Restrict Chatter Section
+                            </h6>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-xl-4 col-lg-4 col-md-6 col-sm-12 my-2">
+                    <div class="tabs shadow"
+                         style="padding:10px 15px; background-color: #1b672c; border-radius:6px">
+                        <div class="d-flex align-items-center">
+                            <h6 style="font-family:'Inter', sans-serif; font-size:19px; line-height:25px; font-weight:600; color: #ffffff;margin-bottom:0px !important; margin-left:12px">
+                                Restrict Chatter Send Message/activities/Log notes Button
+                            </h6>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-xl-4 col-lg-4 col-md-6 col-sm-12 my-2">
+                    <div class="tabs shadow"
+                         style="padding:10px 15px; background-color: #1b672c; border-radius:6px">
+                        <div class="d-flex align-items-center">
+                            <h6 style="font-family:'Inter', sans-serif; font-size:19px; line-height:25px; font-weight:600; color: #ffffff;margin-bottom:0px !important; margin-left:12px">
+                                Restrict Chatter Attachment Button
+                            </h6>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-xl-4 col-lg-4 col-md-6 col-sm-12 my-2">
+                    <div class="tabs shadow"
+                         style="padding:10px 15px; background-color: #1b672c; border-radius:6px">
+                        <div class="d-flex align-items-center">
+                            <h6 style="font-family:'Inter', sans-serif; font-size:19px; line-height:25px; font-weight:600; color: #ffffff;margin-bottom:0px !important; margin-left:12px">
+                                Restrict Chatter Edit/Delete Option
+                            </h6>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-xl-4 col-lg-4 col-md-6 col-sm-12 my-2">
+                    <div class="tabs shadow"
+                         style="padding:10px 15px; background-color: #1b672c; border-radius:6px">
+                        <div class="d-flex align-items-center">
+                            <h6 style="font-family:'Inter', sans-serif; font-size:19px; line-height:25px; font-weight:600; color: #ffffff;margin-bottom:0px !important; margin-left:12px">
+                                Restrict NoteBook Pages
+                            </h6>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-xl-4 col-lg-4 col-md-6 col-sm-12 my-2">
+                    <div class="tabs shadow"
+                         style="padding:10px 15px; background-color: #1b672c; border-radius:6px">
+                        <div class="d-flex align-items-center">
+                            <h6 style="font-family:'Inter', sans-serif; font-size:19px; line-height:25px; font-weight:600; color: #ffffff;margin-bottom:0px !important; margin-left:12px">
+                                Restrict Main Menus/Sub Menus
+                            </h6>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xl-4 col-lg-4 col-md-6 col-sm-12 my-2">
+                    <div class="tabs shadow"
+                         style="padding:10px 15px; background-color: #1b672c; border-radius:6px">
+                        <div class="d-flex align-items-center">
+                            <h6 style="font-family:'Inter', sans-serif; font-size:19px; line-height:25px; font-weight:600; color: #ffffff;margin-bottom:0px !important; margin-left:12px">
+                                Restrict Export Fields/Templates
+                            </h6>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-xl-4 col-lg-4 col-md-6 col-sm-12 my-2">
+                    <div class="tabs shadow"
+                         style="padding:10px 15px; background-color: #1b672c; border-radius:6px">
+                        <div class="d-flex align-items-center">
+                            <h6 style="font-family:'Inter', sans-serif; font-size:19px; line-height:25px; font-weight:600; color: #ffffff;margin-bottom:0px !important; margin-left:12px">
+                                Disable Debug
+                            </h6>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="row justify-content-center mb-5">
+        <div class="col-xl-10 col-lg-11 col-md-12">
+            <div class="f-title text-left">
+                <h2 style="font-family:'Inter', sans-serif; font-size:45px; line-height:54px; font-weight:700; color:#151765; margin-bottom:0 !important">
+                    1. User-Model specific control
+                </h2>
+            </div>
+            <ul style="font-family:'Inter', sans-serif; font-size:18px; line-height:30px; color:#151765;">
+                   <img src="./assets/screenshots/1.png" class="img-fluid mb-3" >
+            </ul>
+        </div>
+        <div class="col-xl-10 col-lg-11 col-md-12">
+            <div class="f-title text-left">
+                <h2 style="font-family:'Inter', sans-serif; font-size:45px; line-height:54px; font-weight:700; color:#151765; margin-bottom:0 !important">
+                    2. Global control for a specific model
+                </h2>
+            </div>
+            <ul style="font-family:'Inter', sans-serif; font-size:18px; line-height:30px; color:#151765;">
+                   <img src="./assets/screenshots/2.png" class="img-fluid mb-3" >
+            </ul>
+        </div>
+        <div class="col-xl-10 col-lg-11 col-md-12">
+            <div class="f-title text-left">
+                <h2 style="font-family:'Inter', sans-serif; font-size:45px; line-height:54px; font-weight:700; color:#151765; margin-bottom:0 !important">
+                    3. Export fields & template restrictions
+                </h2>
+            </div>
+            <ul style="font-family:'Inter', sans-serif; font-size:18px; line-height:30px; color:#151765;">
+                   <img src="./assets/screenshots/3.png" class="img-fluid mb-3" >
+            </ul>
+            <ul style="font-family:'Inter', sans-serif; font-size:18px; line-height:30px; color:#151765;">
+                   <img src="./assets/screenshots/4.png" class="img-fluid mb-3" >
+            </ul>
+        </div>
+
+        <div class="col-xl-10 col-lg-11 col-md-12">
+            <div class="f-title text-left">
+                <h2 style="font-family:'Inter', sans-serif; font-size:45px; line-height:54px; font-weight:700; color:#151765; margin-bottom:0 !important">
+                    4. Global settings hide controls
+                </h2>
+            </div>
+            <ul style="font-family:'Inter', sans-serif; font-size:18px; line-height:30px; color:#151765;">
+                   <img src="./assets/screenshots/5.png" class="img-fluid mb-3" >
+            </ul>
+        </div>
+        <div class="col-xl-10 col-lg-11 col-md-12">
+            <div class="f-title text-left">
+                <h2 style="font-family:'Inter', sans-serif; font-size:45px; line-height:54px; font-weight:700; color:#151765; margin-bottom:0 !important">
+                    5. Main Menu & Sub-Menu restrictions
+                </h2>
+            </div>
+            <ul style="font-family:'Inter', sans-serif; font-size:18px; line-height:30px; color:#151765;">
+                   <img src="./assets/screenshots/6.png" class="img-fluid mb-3">
+            </ul>
+        </div>
+
+        <div class="text-center" style="margin-top:50px;">
+            <a href="#"
+               class="btn"
+               style="
+                    display:inline-block;
+                    background:#ac333f;
+                    color:#fff;
+                    font-family:'Inter', sans-serif;
+                    font-size:20px;
+                    font-weight:600;
+                    padding:16px 50px;
+                    border-radius:8px;
+                    text-decoration:none;
+                    box-shadow:0 8px 20px rgba(0,0,0,0.2);
+                    transition:all 0.3s ease;
+               "
+               onmouseover="this.style.background='#0f1150'"
+               onmouseout="this.style.background='#151765'">
+                <i class="fa fa-camera" style="margin-right:10px;"></i>
+                Setups and Screenshots
+            </a>
+        </div>
+
+
+        <div class="col-xl-10 col-lg-11 col-md-12">
+            <div class="f-title text-left">
+                <h2 style="font-family:'Inter', sans-serif; font-size:45px; line-height:54px; font-weight:700; color:#151765; margin-bottom:0 !important">
+                    1. Create, Edit, Delete, Archive, Duplicate ,Import, Export, Duplicate, Add a Properties, Upload :
+                </h2>
+            </div>
+            <ul style="font-family:'Inter', sans-serif; font-size:18px; line-height:30px; color:#ec0505;">
+                  <li style="font-weight:700; font-size:28px;"> Create </li>
+                   <img src="./assets/screenshots/c1.png" class="img-fluid mb-3">
+                   <img src="./assets/screenshots/c02.png" class="img-fluid mb-3">
+                   <img src="./assets/screenshots/c03.png" class="img-fluid mb-3">
+                   <img src="./assets/screenshots/c04.png" class="img-fluid mb-3">
+                   <img src="./assets/screenshots/c05.png" class="img-fluid mb-3">
+                   <img src="./assets/screenshots/re_1.png" class="img-fluid mb-3">
+                   <img src="./assets/screenshots/re_2.png" class="img-fluid mb-3">
+                   <img src="./assets/screenshots/re_3.png" class="img-fluid mb-3">
+                   <img src="./assets/screenshots/re_4.png" class="img-fluid mb-3">
+                   <img src="./assets/screenshots/re_5.png" class="img-fluid mb-3">
+                   <img src="./assets/screenshots/re_6.png" class="img-fluid mb-3">
+                   <img src="./assets/screenshots/re_7.png" class="img-fluid mb-3">
+                   <img src="./assets/screenshots/re_8.png" class="img-fluid mb-3">
+                   <img src="./assets/screenshots/re_9.png" class="img-fluid mb-3">
+
+                 <li style="font-weight:700; font-size:28px;"> Edit, Delete, Archieve:</li>
+                   <img src="./assets/screenshots/edit_1.png" class="img-fluid mb-3">
+                   <img src="./assets/screenshots/edit_2.png" class="img-fluid mb-3">
+                   <img src="./assets/screenshots/edit_3.png" class="img-fluid mb-3">
+
+                <li style="font-weight:700; font-size:28px;"> Duplicate:</li>
+                   <img src="./assets/screenshots/edit_4.png" class="img-fluid mb-3">
+                   <img src="./assets/screenshots/edit_5.png" class="img-fluid mb-3">
+                   <img src="./assets/screenshots/edit_6.png" class="img-fluid mb-3">
+                   <img src="./assets/screenshots/edit_7.png" class="img-fluid mb-3">
+
+                <li style="font-weight:700; font-size:28px;"> Import:</li>
+                   <img src="./assets/screenshots/edit_8.png" class="img-fluid mb-3">
+                   <img src="./assets/screenshots/edit_9.png" class="img-fluid mb-3">
+
+                <li style="font-weight:700; font-size:28px;"> Export:</li>
+                   <img src="./assets/screenshots/edit_10.png" class="img-fluid mb-3">
+                   <img src="./assets/screenshots/edit_11.png" class="img-fluid mb-3">
+                   <img src="./assets/screenshots/edit_12.png" class="img-fluid mb-3">
+                   <img src="./assets/screenshots/edit_13.png" class="img-fluid mb-3">
+
+                <li style="font-weight:700; font-size:28px;"> Add a Properties:</li>
+                   <img src="./assets/screenshots/up1.png" class="img-fluid mb-3">
+                   <img src="./assets/screenshots/up2.png" class="img-fluid mb-3">
+
+                <li style="font-weight:700; font-size:28px;"> Upload :</li>
+                   <img src="./assets/screenshots/up3.png" class="img-fluid mb-3">
+                   <img src="./assets/screenshots/up4.png" class="img-fluid mb-3">
+                   <img src="./assets/screenshots/up5.png" class="img-fluid mb-3">
+                   <img src="./assets/screenshots/up6.png" class="img-fluid mb-3">
+            </ul>
+
+            <div class="f-title text-left">
+                <h2 style="font-family:'Inter', sans-serif; font-size:45px; line-height:54px; font-weight:700; color:#151765; margin-bottom:0 !important">
+                    2. Search View Sections : Search bar, Filters, Group-by, Favorites :
+                </h2>
+            </div>
+            <ul style="font-family:'Inter', sans-serif; font-size:18px; line-height:30px; color:#ec0505;">
+                  <li style="font-weight:700; font-size:28px;"> Search bar </li>
+                   <img src="./assets/screenshots/se_1.png" class="img-fluid mb-3">
+                   <img src="./assets/screenshots/se_2.png" class="img-fluid mb-3">
+
+                 <li style="font-weight:700; font-size:28px;"> Filter Section:</li>
+                   <img src="./assets/screenshots/se_3.png" class="img-fluid mb-3">
+                   <img src="./assets/screenshots/se_4.png" class="img-fluid mb-3">
+
+                <li style="font-weight:700; font-size:28px;"> Group-by Section:</li>
+                   <img src="./assets/screenshots/se_5.png" class="img-fluid mb-3">
+                   <img src="./assets/screenshots/se_6.png" class="img-fluid mb-3">
+
+                <li style="font-weight:700; font-size:28px;"> Favorite Section:</li>
+                   <img src="./assets/screenshots/se_7.png" class="img-fluid mb-3">
+                   <img src="./assets/screenshots/se_8.png" class="img-fluid mb-3">
+
+            </ul>
+
+
+            <div class="f-title text-left">
+                <h2 style="font-family:'Inter', sans-serif; font-size:45px; line-height:54px; font-weight:700; color:#151765; margin-bottom:0 !important">
+                    3. Chatters: Chatter Section, Send Messages, log notes, activities, Attachments , Attachments Preview, Message Edit/Delete Option:
+                </h2>
+            </div>
+            <ul style="font-family:'Inter', sans-serif; font-size:18px; line-height:30px; color:#ec0505;">
+                  <li style="font-weight:700; font-size:28px;"> Chatter Section</li>
+                   <img src="./assets/screenshots/hcs.png" class="img-fluid mb-3">
+                   <img src="./assets/screenshots/chat_2.png" class="img-fluid mb-3">
+
+                 <li style="font-weight:700; font-size:28px;"> Send Messages:</li>
+                   <img src="./assets/screenshots/hsm.png" class="img-fluid mb-3">
+                   <img src="./assets/screenshots/chat_4.png" class="img-fluid mb-3">
+                   <img src="./assets/screenshots/chat_5.png" class="img-fluid mb-3">
+
+                <li style="font-weight:700; font-size:28px;"> log notes, Activities, Attachments:</li>
+                   <img src="./assets/screenshots/hlaa.png" class="img-fluid mb-3">
+                   <img src="./assets/screenshots/chat_7.png" class="img-fluid mb-3">
+                   <img src="./assets/screenshots/chat_8.png" class="img-fluid mb-3">
+
+                <li style="font-weight:700; font-size:28px;"> Message Edit,Delete Option:</li>
+                   <img src="./assets/screenshots/h_ed_ed.png" class="img-fluid mb-3">
+                   <img src="./assets/screenshots/chat_10.png" class="img-fluid mb-3">
+                   <img src="./assets/screenshots/chat_11.png" class="img-fluid mb-3">
+                   <img src="./assets/screenshots/chat_12.png" class="img-fluid mb-3">
+
+                <li style="font-weight:700; font-size:28px;"> Remove Attachment Preview :</li>
+                   <img src="./assets/screenshots/at_r_1.png" class="img-fluid mb-3">
+                   <img src="./assets/screenshots/at_r_2.png" class="img-fluid mb-3">
+                   <img src="./assets/screenshots/at_r_3.png" class="img-fluid mb-3">
+
+                <li style="font-weight:700; font-size:28px;"> Add Attachment Preview :</li>
+                   <img src="./assets/screenshots/at_p_1.png" class="img-fluid mb-3">
+                   <img src="./assets/screenshots/at_p_2.png" class="img-fluid mb-3">
+                   <img src="./assets/screenshots/at_p_3.png" class="img-fluid mb-3">
+                   <img src="./assets/screenshots/at_p_4.png" class="img-fluid mb-3">
+            </ul>
+
+            <div class="f-title text-left">
+                <h2 style="font-family:'Inter', sans-serif; font-size:45px; line-height:54px; font-weight:700; color:#151765; margin-bottom:0 !important">
+                    4. Action visibility (server, window, Report actions) :
+                </h2>
+            </div>
+            <ul style="font-family:'Inter', sans-serif; font-size:18px; line-height:30px; color:#ec0505;">
+                   <img src="./assets/screenshots/action_1.png" class="img-fluid mb-3">
+                   <img src="./assets/screenshots/action_2.png" class="img-fluid mb-3">
+                   <img src="./assets/screenshots/action_3.png" class="img-fluid mb-3">
+                   <img src="./assets/screenshots/action_4.png" class="img-fluid mb-3">
+                   <img src="./assets/screenshots/action_5.png" class="img-fluid mb-3">
+            </ul>
+
+            <div class="f-title text-left">
+                <h2 style="font-family:'Inter', sans-serif; font-size:45px; line-height:54px; font-weight:700; color:#151765; margin-bottom:0 !important">
+                    5. Model Field visibility Control:
+                </h2>
+            </div>
+            <ul style="font-family:'Inter', sans-serif; font-size:18px; line-height:30px; color:#ec0505;">
+                <img src="./assets/screenshots/fe.png" class="img-fluid mb-3">
+                <img src="./assets/screenshots/fe_2.png" class="img-fluid mb-3">
+                <img src="./assets/screenshots/fe_3.png" class="img-fluid mb-3">
+                <img src="./assets/screenshots/fe_4.png" class="img-fluid mb-3">
+                <img src="./assets/screenshots/fe_5.png" class="img-fluid mb-3">
+                <img src="./assets/screenshots/fe_l_1.png" class="img-fluid mb-3">
+                <img src="./assets/screenshots/fe_l_2.png" class="img-fluid mb-3">
+                <img src="./assets/screenshots/fe_l_3.png" class="img-fluid mb-3">
+            </ul>
+
+            <div class="f-title text-left">
+                <h2 style="font-family:'Inter', sans-serif; font-size:45px; line-height:54px; font-weight:700; color:#151765; margin-bottom:0 !important">
+                    6. Hide HeaderButton, ButtonBox and Kanban Menu Links visibility :
+                </h2>
+            </div>
+            <ul style="font-family:'Inter', sans-serif; font-size:18px; line-height:30px; color:#ec0505;">
+                <img src="./assets/screenshots/button_1.png" class="img-fluid mb-3">
+                <img src="./assets/screenshots/button_2.png" class="img-fluid mb-3">
+                <li>Select Buttons To Hide</li>
+                <img src="./assets/screenshots/button_conf.gif" class="img-fluid mb-3" style=" width: 100% !important;">
+                <img src="./assets/screenshots/button_4.png" class="img-fluid mb-3">
+                <img src="./assets/screenshots/button_5.png" class="img-fluid mb-3">
+                <li>Hide Kanban Menu Links</li>
+                <img src="./assets/screenshots/kb_6.png" class="img-fluid mb-3">
+                <img src="./assets/screenshots/kb_7.png" class="img-fluid mb-3">
+                <img src="./assets/screenshots/kb_8.png" class="img-fluid mb-3">
+                <img src="./assets/screenshots/menu_link_1.png" class="img-fluid mb-3">
+                <img src="./assets/screenshots/menu_link_2.png" class="img-fluid mb-3">
+                <img src="./assets/screenshots/menu_link_3.png" class="img-fluid mb-3">
+            </ul>
+
+            <div class="f-title text-left">
+                <h2 style="font-family:'Inter', sans-serif; font-size:45px; line-height:54px; font-weight:700; color:#151765; margin-bottom:0 !important">
+                    6. Hide HeaderButton, ButtonBox and Kanban Menu Links visibility :
+                </h2>
+            </div>
+            <ul style="font-family:'Inter', sans-serif; font-size:18px; line-height:30px; color:#ec0505;">
+                <img src="./assets/screenshots/button_1.png" class="img-fluid mb-3">
+                <img src="./assets/screenshots/button_2.png" class="img-fluid mb-3">
+                <li>Select Buttons To Hide</li>
+                <img src="./assets/screenshots/button_conf.gif" class="img-fluid mb-3" style=" width: 100% !important;">
+                <img src="./assets/screenshots/button_4.png" class="img-fluid mb-3">
+                <img src="./assets/screenshots/button_5.png" class="img-fluid mb-3">
+                <li>Hide Kanban Menu Links</li>
+                <img src="./assets/screenshots/kb_6.png" class="img-fluid mb-3">
+                <img src="./assets/screenshots/kb_7.png" class="img-fluid mb-3">
+                <img src="./assets/screenshots/kb_8.png" class="img-fluid mb-3">
+                <img src="./assets/screenshots/menu_link_1.png" class="img-fluid mb-3">
+                <img src="./assets/screenshots/menu_link_2.png" class="img-fluid mb-3">
+                <img src="./assets/screenshots/menu_link_3.png" class="img-fluid mb-3">
+            </ul>
+
+            <div class="f-title text-left">
+                <h2 style="font-family:'Inter', sans-serif; font-size:45px; line-height:54px; font-weight:700; color:#151765; margin-bottom:0 !important">
+                    7. Notebook page visibility :
+                </h2>
+            </div>
+            <ul style="font-family:'Inter', sans-serif; font-size:18px; line-height:30px; color:#ec0505;">
+                <img src="./assets/screenshots/page_1.png" class="img-fluid mb-3">
+                <img src="./assets/screenshots/page_2.png" class="img-fluid mb-3">
+                <img src="./assets/screenshots/page_3.png" class="img-fluid mb-3">
+            </ul>
+
+            <div class="f-title text-left">
+                <h2 style="font-family:'Inter', sans-serif; font-size:45px; line-height:54px; font-weight:700; color:#151765; margin-bottom:0 !important">
+                    8. Menu/SubMenu visibility :
+                </h2>
+            </div>
+            <ul style="font-family:'Inter', sans-serif; font-size:18px; line-height:30px; color:#ec0505;">
+                <img src="./assets/screenshots/menus_menu_before.png" class="img-fluid mb-3">
+                <img src="./assets/screenshots/menus_men.png" class="img-fluid mb-3">
+                <img src="./assets/screenshots/menus_menu_after.png" class="img-fluid mb-3">
+            </ul>
+
+            <div class="f-title text-left">
+                <h2 style="font-family:'Inter', sans-serif; font-size:45px; line-height:54px; font-weight:700; color:#151765; margin-bottom:0 !important">
+                    9. Export Fields/Templates Restrictions :
+                </h2>
+            </div>
+            <ul style="font-family:'Inter', sans-serif; font-size:18px; line-height:30px; color:#ec0505;">
+                <img src="./assets/screenshots/export_chat_1.png" class="img-fluid mb-3">
+                <img src="./assets/screenshots/expot_01.png" class="img-fluid mb-3">
+                <img src="./assets/screenshots/export_chat_3.png" class="img-fluid mb-3">
+                <li> Restrict Export Fields Access Helps To Hide the Fields globally During Export It will Show only for Selected Users</li>
+                <img src="./assets/screenshots/zxczxz.png" class="img-fluid mb-3">
+                <img src="./assets/screenshots/export_chat_5.png" class="img-fluid mb-3">
+                <img src="./assets/screenshots/export_chat_6.png" class="img-fluid mb-3">
+                 <li> Restrict Export Templates: User Can Restrict The Export Templates globally , Select the Users To show that Template Specific Users</li>
+                <img src="./assets/screenshots/tm_1.png" class="img-fluid mb-3">
+                <img src="./assets/screenshots/export_chat_8.png" class="img-fluid mb-3">
+                <img src="./assets/screenshots/export_chat_9.png" class="img-fluid mb-3">
+            </ul>
+
+            <div class="f-title text-left">
+                <h2 style="font-family:'Inter', sans-serif; font-size:45px; line-height:54px; font-weight:700; color:#151765; margin-bottom:0 !important">
+                    10. Disable Debug Access For Specific Users :
+                </h2>
+            </div>
+            <ul style="font-family:'Inter', sans-serif; font-size:18px; line-height:30px; color:#ec0505;">
+                <img src="./assets/screenshots/debug_gr.png" class="img-fluid mb-3">
+                <img src="./assets/screenshots/deb_1.png" class="img-fluid mb-3">
+                <img src="./assets/screenshots/dsazxxsas.png" class="img-fluid mb-3">
+            </ul>
+        </div>
+    </div>
+
+  <!-- Services -->
+    <section class="text-center my-5">
+    <h2 style="color:#222;">Our Odoo Services</h2>
+    <div class="row mt-4">
+      <div class="col-md-3 mb-4">
+        <div class="card shadow-sm border-0 p-4" style="border-radius:15px;">
+          <img src="assets/icons/cogs.png" width="48" height="48" class="mx-auto mb-3" alt="Customization">
+          <h6>Customization</h6>
+        </div>
+      </div>
+      <div class="col-md-3 mb-4">
+        <div class="card shadow-sm border-0 p-4" style="border-radius:15px;">
+          <img src="assets/icons/wrench.png" width="48" height="48" class="mx-auto mb-3" alt="Implementation">
+          <h6>Implementation</h6>
+        </div>
+      </div>
+      <div class="col-md-3 mb-4">
+        <div class="card shadow-sm border-0 p-4" style="border-radius:15px;">
+          <img src="assets/icons/lifebuoy.png" width="48" height="48" class="mx-auto mb-3" alt="Support">
+          <h6>Support</h6>
+        </div>
+      </div>
+      <div class="col-md-3 mb-4">
+        <div class="card shadow-sm border-0 p-4" style="border-radius:15px;">
+          <img src="assets/icons/puzzle.png" width="48" height="48" class="mx-auto mb-3" alt="Integration">
+          <h6>Integration</h6>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Related Products -->
+    <section class="text-center my-5">
+    <h2 style="color:#222;">Related Products</h2>
+    <div class="row mt-4">
+      <div class="col-md-3 mb-4">
+        <a href="https://apps.odoo.com/apps/modules/15.0/widget_one2many_search_select" class="text-decoration-none text-dark">
+          <div class="card border-0 shadow-sm" style="border-radius:10px;">
+            <img src="./assets/screenshots/br.png" class="card-img-top" alt="One2Many Search Select">
+            <div class="card-body">
+              <p class="card-title font-weight-bold mb-0">One2Many Search Select</p>
+            </div>
+          </div>
+        </a>
+      </div>
+      <div class="col-md-3 mb-4">
+        <a href="https://apps.odoo.com/apps/modules/16.0/hotel_reservation_dashboard" class="text-decoration-none text-dark">
+          <div class="card border-0 shadow-sm" style="border-radius:10px;">
+            <img src="./assets/screenshots/hb.gif" class="card-img-top" alt="Hotel Dashboard">
+            <div class="card-body">
+              <p class="card-title font-weight-bold mb-0">Hotel Reservation Dashboard</p>
+            </div>
+          </div>
+        </a>
+      </div>
+      <div class="col-md-3 mb-4">
+        <a href="https://apps.odoo.com/apps/modules/15.0/print_wizard" class="text-decoration-none text-dark">
+          <div class="card border-0 shadow-sm" style="border-radius:10px;">
+            <img src="./assets/screenshots/bdr.png" class="card-img-top" alt="Big Data Reports">
+            <div class="card-body">
+              <p class="card-title font-weight-bold mb-0">Big Data Reports</p>
+            </div>
+          </div>
+        </a>
+      </div>
+      <div class="col-md-3 mb-4">
+        <a href="https://apps.odoo.com/apps/modules/17.0/message_gateway" class="text-decoration-none text-dark">
+          <div class="card border-0 shadow-sm" style="border-radius:10px;">
+            <img src="./assets/screenshots/mssge_gty.gif" class="card-img-top" alt="Message Gateway">
+            <div class="card-body">
+              <p class="card-title font-weight-bold mb-0">Message Gateway (Twilio, Nexmo…)</p>
+            </div>
+          </div>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact -->
+    <section class="text-center my-5">
+        <h2 style="color:#222;">Need Help?</h2>
+        <div class="d-flex flex-column align-items-center mt-4">
+          <a href="mailto:odoodevs8068@gmail.com" class="btn btn-dark mb-2" style="width:250px;">
+            <i class="fa fa-envelope mr-2"></i>Email Us
+          </a>
+          <a href="https://wa.me/966542273082" class="btn btn-success mb-2" style="width:250px;">
+            <i class="fa fa-whatsapp mr-2"></i>WhatsApp (KSA) 966 54227 3082
+          </a>
+          <a href="https://wa.me/919360353170" class="btn btn-success" style="width:250px;">
+            <i class="fa fa-whatsapp mr-2"></i>WhatsApp (India) 91 9360353170
+          </a>
+        </div>
+    </section>
+
+</body>
+</html>

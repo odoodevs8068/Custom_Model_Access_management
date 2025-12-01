@@ -1,0 +1,198 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<templates id="custom_model_access_management_button_template" xml:space="preserve">
+    <t t-name="custom_model_access_management.AddButtonDialog">
+        <Dialog title.translate="Select Buttons">
+            <div class="o_inner_wizard">
+               <div class="o_list_renderer o_renderer table-responsive" tabindex="-1">
+                   <table class="o_list_table table table-sm table-hover position-relative mb-0 o_list_table_ungrouped table-striped" style="table-layout: fixed;">
+                        <thead>
+                            <tr>
+                                <th class="o_list_record_selector o_list_controller align-middle pe-1 cursor-pointer" tabindex="-1" style="width: 40px;">
+                                    <div class="o-checkbox form-check d-flex m-0">
+                                            <input type="checkbox"
+                                                   class="form-check-input"
+                                                   t-model="state.selectAll"
+                                                   t-on-click="toggleSelectAll"/>
+                                            <label class="form-check-label"/>
+                                        </div>
+                                </th>
+                                <th class="align-middle o_column_sortable position-relative cursor-pointer opacity-trigger-hover w-print-auto" tabindex="-1" style="width: 40px;" data-name="string">
+                                    <div class="d-flex">
+                                        <span class="d-block min-w-0 text-truncate flex-grow-1 flex-shrink-1">Button Name</span>
+                                    </div>
+                                </th>
+                                <th class="align-middle o_column_sortable position-relative cursor-pointer opacity-trigger-hover w-print-auto" tabindex="-1" style="width: 40px;" data-name="name">
+                                    <div class="d-flex">
+                                        <span class="d-block min-w-0 text-truncate flex-grow-1 flex-shrink-1">Technical Name</span>
+                                    </div>
+                                </th>
+                                <th class="align-middle o_column_sortable position-relative cursor-pointer opacity-trigger-hover w-print-auto" tabindex="-1" style="width: 40px;" data-name="name">
+                                    <div class="d-flex">
+                                        <span class="d-block min-w-0 text-truncate flex-grow-1 flex-shrink-1">Button Type</span>
+                                    </div>
+                                </th>
+                                <th class="align-middle o_column_sortable position-relative cursor-pointer opacity-trigger-hover w-print-auto" tabindex="-1" style="width: 40px;" data-name="name">
+                                    <div class="d-flex">
+                                        <span class="d-block min-w-0 text-truncate flex-grow-1 flex-shrink-1">View Type</span>
+                                    </div>
+                                </th>
+                            </tr>
+                        </thead>
+                        <tbody class="ui-sortable">
+                            <t t-if="state.buttons_data.length">
+                                <tr t-foreach="state.buttons_data" t-as="rec"   t-key="rec._key">
+<!--                                <tr t-foreach="state.buttons_data" t-as="rec" t-key="rec.technical_name and rec.type and rec.view_type">-->
+                                    <td class="o_list_record_selector user-select-none">
+                                        <div class="o-checkbox form-check">
+                                            <input type="checkbox"
+                                                   class="form-check-input"
+                                                   t-att-id="'checkbox-' + rec.name"
+                                                   t-model="rec.selected" />
+                                            <label class="form-check-label"
+                                                   t-att-for="'checkbox-' + rec.name"/>
+                                        </div>
+                                    </td>
+                                    <td><t t-esc="rec.name"/></td>
+                                    <td><t t-esc="rec.technical_name"/></td>
+                                    <td><t t-esc="rec.type"/></td>
+                                    <td><t t-esc="rec.view_type"/></td>
+                                    <td style="display: none;"><t t-esc="props.context.model_access_id"/></td>
+                                </tr>
+                            </t>
+                        </tbody>
+                   </table>
+               </div>
+            </div>
+
+            <t t-set-slot="footer">
+                <button class="btn btn-primary" t-on-click="SelectedRecords">select</button>
+                <button class="btn btn-secondary" t-on-click="cancel">Cancel</button>
+            </t>
+        </Dialog>
+    </t>
+</templates>
+
+
+
+
+
+
+
+<!--                            <tr t-foreach="props.button_data"-->
+<!--                                t-as="button"-->
+<!--                                t-key="button.name"-->
+<!--                                t-att-data-id="button.name"-->
+<!--                                class="o_data_row">-->
+
+<!--                                <td class="o_list_record_selector user-select-none" tabindex="-1">-->
+<!--                                    <div class="o-checkbox form-check">-->
+<!--                                        <input type="checkbox"-->
+<!--                                               class="form-check-input"-->
+<!--                                               t-att-id="'checkbox-' + button.name"/>-->
+<!--                                        <label class="form-check-label"-->
+<!--                                               t-att-for="'checkbox-' + button.name"></label>-->
+<!--                                    </div>-->
+<!--                                </td>-->
+
+<!--                                <td class="o_data_cell cursor-pointer o_field_cell o_list_char-->
+<!--                                            o_readonly_modifier fw-bold"-->
+<!--                                    data-tooltip-delay="1000"-->
+<!--                                    tabindex="-1">-->
+<!--                                    <t t-esc="button.string"/>-->
+<!--                                </td>-->
+
+<!--                                <td class="o_data_cell cursor-pointer o_field_cell o_list_char-->
+<!--                                            o_readonly_modifier fw-bold"-->
+<!--                                    data-tooltip-delay="1000"-->
+<!--                                    tabindex="-1">-->
+<!--                                    <t t-esc="button.name"/>-->
+<!--                                </td>-->
+
+<!--                            </tr>-->
+
+
+
+
+                                <!--          <select id="employee"  data-live-search="true"-->
+<!--                                                multiple="multiple"-->
+<!--                                                size="6"-->
+<!--                                                style="width: 60%;"-->
+<!--                                                class="o_input form-select selectpicker"-->
+<!--                                                t-on-change="onChangeEmployee">-->
+<!--                                            <t t-foreach="state.RecordList" t-as="rec" t-key="rec.id">-->
+<!--                                                <option t-att-value="rec.id" > <span t-esc="rec.pin "/> - <span t-esc="rec.name "/> </option>-->
+<!--                                            </t>-->
+<!--                                </select>-->
+
+
+<!--<templates id="print_wizard_template" xml:space="preserve">-->
+<!--    <t t-name="print_wizard.PrintWizardDialog">-->
+<!--        <Dialog title.translate="Download Dynamic Reports">-->
+<!--            <div class="">-->
+<!--                <div class="o_form_group row">-->
+<!--                    <label class="o_form_label" for="report_type_select" style="width: auto;">-->
+<!--                        Report Type:-->
+<!--                    </label>-->
+<!--                    <select id="report_type_select" style="width: auto;"-->
+<!--                            class="o_input form-select"-->
+<!--                            t-on-change="onChangeExportList">-->
+<!--                        <option value="">Select a report type</option>-->
+<!--                        <t t-foreach="report_types" t-as="type" t-key="type.name">-->
+<!--                            <option t-att-value="type.name" t-esc="type.name"/>-->
+<!--                        </t>-->
+<!--                    </select>-->
+<!--                </div>-->
+<!--                <t t-if="active_model == 'hr.attendance'">-->
+<!--                    <br/>-->
+<!--                    <div class="o_form_group row">-->
+<!--                        <label class="o_form_label" for="report_type_select" style="width: auto;">-->
+<!--                            Attendance Type:-->
+<!--                        </label>-->
+<!--                        <select id="attendance_type" style="width: auto;"-->
+<!--                                class="o_input form-select"-->
+<!--                                t-on-change="onChangeAttendanceType">-->
+<!--                            <option value="department">Department</option>-->
+<!--                            <option value="employee">Employee</option>-->
+<!--                        </select>-->
+<!--                    </div>-->
+<!--                    <div class="o_form_group row">-->
+<!--                        <label class="o_form_label" for="report_type_select" style="width: auto;">-->
+<!--                            Department:-->
+<!--                        </label>-->
+<!--                        <select id="Department" style="width: auto;"-->
+<!--                                class="o_input form-select"-->
+<!--                                t-on-change="onChangeDepartment">-->
+<!--                            <option />-->
+<!--                        </select>-->
+<!--                    </div>-->
+<!--                    <div class="o_form_group row">-->
+<!--                        <label class="o_form_label" for="report_type_select" style="width: auto;">-->
+<!--                            Employees:-->
+<!--                        </label>-->
+<!--                        <select id="employee" style="width: auto;"-->
+<!--                                class="o_input form-select"-->
+<!--                                t-on-change="onChangeemployee">-->
+<!--                        </select>-->
+<!--                    </div>-->
+<!--                </t>-->
+
+<!--                <br/>-->
+<!--                <div class="o_form_group ">-->
+<!--                    <label class="o_form_label" for="report_type_select" style="width: auto;">-->
+<!--                        Date From:-->
+<!--                    </label>-->
+<!--                </div>-->
+<!--                <br/>-->
+<!--                <div class="o_form_group ">-->
+<!--                    <label class="o_form_label" for="report_type_select" style="width: auto;">-->
+<!--                        Date To:-->
+<!--                    </label>-->
+<!--                </div>-->
+<!--            </div>-->
+<!--            <t t-set-slot="footer">-->
+<!--                <button class="btn btn-primary" t-on-click="confirm">Confirm</button>-->
+<!--                <button class="btn btn-secondary" t-on-click="cancel">Cancel</button>-->
+<!--            </t>-->
+<!--        </Dialog>-->
+<!--    </t>-->
+<!--</templates>-->

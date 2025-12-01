@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+
+<!--    <record id="ir_model_custom_access_rights_inherit" model="ir.ui.view">-->
+<!--        <field name="name">ir_model_custom_access_rights_inherit</field>-->
+<!--        <field name="model">ir.model</field>-->
+<!--        <field name="inherit_id" ref="base.view_model_form"/>-->
+<!--        <field name="arch" type="xml">-->
+<!--            <xpath expr="//form/sheet/notebook" position="inside">-->
+<!--                <page string="User Access Rights">-->
+<!--                    <field name="model_access_right_ids"-->
+<!--                           context="{-->
+<!--                            'tree_view_ref': 'custom_model_access_management.access_right_view_tree',-->
+<!--                            'default_type': 'model_access_control',-->
+<!--                            }"/>-->
+<!--                </page>-->
+<!--            </xpath>-->
+<!--        </field>-->
+<!--    </record>-->
+
+
+    <record id="ir_ui_menu_access_inherit" model="ir.ui.view">
+        <field name="name">ir_ui_menu_access_inherit</field>
+        <field name="model">ir.ui.menu</field>
+        <field name="inherit_id" ref="base.edit_menu_access"/>
+        <field name="arch" type="xml">
+            <xpath expr="//notebook" position="inside">
+                <page string="Restrict users" name="user_ids">
+                    <group>
+                        <group>
+                             <field name="user_ids" widget="many2many_tags"/>
+                        </group>
+                    </group>
+                </page>
+            </xpath>
+        </field>
+    </record>
+
+</odoo>

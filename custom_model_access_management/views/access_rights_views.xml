@@ -1,0 +1,218 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+
+    <record id="access_right_view_form" model="ir.ui.view">
+        <field name="name">access_right_view_form</field>
+        <field name="model">model_access.right</field>
+        <field name="arch" type="xml">
+            <form>
+                <sheet>
+                    <group>
+                        <group>
+                            <field name="type" required="1"/>
+                            <field name="model_id" invisible="type == 'show_field'" />
+                            <field name="user_id" invisible="type != 'model_access_control'"/>
+                            <field name="model_name" invisible="1"/>
+                        </group>
+                    </group>
+                    <notebook>
+                        <page string="Model Access">
+                            <group style="color: #c14242;" string="Model/Search View Access" invisible="type not in ['gl_model_access_control', 'model_access_control']" col="3">
+                                    <group >
+                                        <field name="is_create" widget="boolean_toggle"/>
+                                        <field name="is_export" widget="boolean_toggle"/>
+                                        <field name="is_archive" widget="boolean_toggle"/>
+                                        <field name="is_import" widget="boolean_toggle"/>
+                                        <field name="is_addProperty" widget="boolean_toggle"/>
+                                    </group>
+                                    <group>
+                                        <field name="is_edit" widget="boolean_toggle"/>
+                                        <field name="is_delete" widget="boolean_toggle"/>
+                                        <field name="is_duplicate" widget="boolean_toggle"/>
+                                        <field name="show_import" widget="boolean_toggle"/>
+                                    </group>
+                                    <group>
+                                        <field name="hide_searchbar" widget="boolean_toggle"/>
+                                        <field name="hide_filter_section" widget="boolean_toggle"/>
+                                        <field name="hide_group_by_section" widget="boolean_toggle"/>
+                                        <field name="hide_favorites_section" widget="boolean_toggle"/>
+                                    </group>
+                            </group>
+                            <group>
+                                <group style="color: #c14242;" string="Model Field Access" invisible="type != 'model_access_control'">
+                                    <field name="field_ids" widget="many2many_tags"
+                                           domain="[('model_id', '=', model_id)]"/>
+                                </group>
+                            </group>
+                            <group col="2" style="color: #c14242;" string="Hide Export Field/Templates Access"  invisible="type != 'model_access_control'">
+                                <group >
+                                    <field name="export_fields_ids" widget="many2many_tags"  domain="[('model_id', '=', model_id)]" />
+                                </group>
+                                <group>
+                                    <field name="export_templates_ids" widget="many2many_tags"
+                                           domain="[
+                                           ('resource', '=', model_name),
+                                            ('user_ids', '=', False)]"/>
+                                </group>
+                            </group>
+                        </page>
+                        <page string="Actions">
+                            <group col="3">
+                                <group>
+                                    <field name="server_action_ids" options="{'no_create': True}"
+                                           widget="many2many_tags"
+                                           domain="[('model_id', '=', model_id), ('usage', '=', 'ir_actions_server')]"/>
+                                    <field name="report_action_ids" options="{'no_create': True}"
+                                           widget="many2many_tags"
+                                           domain="[('binding_model_id', '=', model_id)]"/>
+                                    <field name="act_window_ids" options="{'no_create': True}" widget="many2many_tags"
+                                           domain="[('binding_model_id', '=', model_id)]"/>
+                                </group>
+                            </group>
+                        </page>
+                        <page string="Header Buttons"  invisible="type not in ['gl_model_access_control', 'model_access_control']" >
+                            <field name="header_button_ids" >
+                                <list>
+                                    <field name="name"/>
+                                    <field name="technical_name"/>
+                                    <field name="type"/>
+                                    <field name="view_type"/>
+                                    <field name="model_access_id" column_invisible="1"/>
+                                </list>
+                            </field>
+                        </page>
+                        <page string="Chatter Section"  invisible="type not in ['gl_model_access_control', 'model_access_control']" >
+                            <group col="2">
+                                <group>
+                                    <field name="hide_chatter_section"/>
+                                    <field name="hide_send_mssge"/>
+                                    <field name="hide_log_note"/>
+                                    <field name="hide_activities"/>
+                                </group>
+                                <group>
+                                    <field name="hide_attachment"/>
+                                    <field name="hide_chatter_edit"/>
+                                    <field name="hide_chatter_delete"/>
+                                    <field name="remove_attachment_preview" invisible="o_attachment_preview"/>
+                                </group>
+                            </group>
+                            <group invisible="type != 'gl_model_access_control'">
+                                <group style="color: #c14242;width: auto;" string="Attachment Preview">
+                                    <group style="    width: auto;">
+                                        <div class="row"  style="padding: 10px;">
+                                            <field name="o_attachment_preview" invisible="1"/>
+                                            <button name="add_attachment_preview" invisible="o_attachment_preview"
+                                                    style="width: auto;margin-right: auto;"
+                                                    type="object"  class="btn btn-primary fa fa-plus">
+                                                <span>
+                                                    Add Attachment preview
+                                                </span>
+                                            </button>
+                                            <button name="button_remove_attachment_preview" style="max-width: fit-content;margin-right: auto;"
+                                                    invisible="not o_attachment_preview" type="object" class="btn btn-secondary fa fa-trash-o">
+                                                <span>
+                                                    Remove Preview
+                                                </span>
+                                            </button>
+                                        </div>
+                                    </group>
+                                    <group>
+                                        <field name="view_id"  invisible="1" force_save="1"
+                                               string="Created View"/>
+                                    </group>
+                                </group>
+                            </group>
+                            <group invisible="type != 'gl_model_access_control'">
+                                <group style="width: auto;">
+                                    <div class="alert alert-info" role="alert"
+                                         style="height: 40px; margin-bottom:0px; width: auto;"
+                                         invisible="not o_attachment_preview">
+                                        Attachment Preview Added <strong/>.
+                                    </div>
+                                </group>
+                            </group>
+                        </page>
+                        <page string="Hide NoteBook Pages"  invisible="type not in ['gl_model_access_control', 'model_access_control']" >
+                            <field name="page_ids">
+                                    <list editable="bottom">
+                                        <field name="name"/>
+                                        <field name="model_access_id" column_invisible="1"/>
+                                    </list>
+                            </field>
+                        </page>
+                    </notebook>
+                </sheet>
+            <chatter/>
+            </form>
+        </field>
+    </record>
+
+
+    <record id="access_right_view_tree" model="ir.ui.view">
+        <field name="name">access_right_view_tree</field>
+        <field name="model">model_access.right</field>
+        <field name="arch" type="xml">
+            <list>
+                <field name="type"/>
+                <field name="model_id"/>
+                <field name="user_id"/>
+                <field name="is_create" widget="boolean_toggle"/>
+                <field name="is_edit" widget="boolean_toggle"/>
+                <field name="is_delete" widget="boolean_toggle"/>
+                <field name="is_export" widget="boolean_toggle"/>
+                <field name="is_archive" widget="boolean_toggle"/>
+                <field name="is_duplicate" widget="boolean_toggle"/>
+                <field name="is_import" widget="boolean_toggle"/>
+                <field name="show_import" widget="boolean_toggle"/>
+            </list>
+        </field>
+    </record>
+
+    <record id="user_model_access_right_action" model="ir.actions.act_window">
+        <field name="name">Restrict Access Rights</field>
+        <field name="res_model">model_access.right</field>
+        <field name="view_mode">list,form</field>
+        <field name="context">{'default_type' : 'model_access_control'}</field>
+        <field name="domain">[('type' , '=', 'model_access_control')]</field>
+        <field name="view_id" ref="custom_model_access_management.access_right_view_tree"/>
+    </record>
+
+    <record id="global_model_access_right_action" model="ir.actions.act_window">
+        <field name="name">Restrict Access Rights</field>
+        <field name="res_model">model_access.right</field>
+        <field name="view_mode">list,form</field>
+        <field name="context">{'default_type' : 'gl_model_access_control'}</field>
+        <field name="domain">[('type' , '=', 'gl_model_access_control')]</field>
+        <field name="view_id" ref="custom_model_access_management.access_right_view_tree"/>
+    </record>
+
+    <menuitem id="access_right_main_menu"
+              name="Access Management"
+              sequence="100"
+              groups="custom_model_access_management.group_model_access_control"/>
+    <menuitem
+            id="access_right_sub_menu_action"
+            parent="access_right_main_menu"
+            name="Access Rights"
+            sequence="1"/>
+    <menuitem
+            id="user_model_menu_action"
+            name="User Model Access Rights"
+            parent="access_right_sub_menu_action"
+            action="user_model_access_right_action"
+            sequence="1"/>
+    <menuitem
+            id="global_model_access_menu_action"
+            name="Global Model Access Rights"
+            action="global_model_access_right_action"
+            parent="access_right_sub_menu_action"
+            sequence="2"/>
+
+
+    <record id="action_select_button_dialog" model="ir.actions.client">
+        <field name="name">Select Button</field>
+        <field name="tag">custom_model_access_management.select_button_dialog</field>
+    </record>
+<!--web_icon="custom_model_access_management,static/description/icon.png"-->
+
+</odoo>

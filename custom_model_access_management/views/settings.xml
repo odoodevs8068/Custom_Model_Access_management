@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding = "utf-8"?>
+<odoo>
+   <record id="res_config_settings_custom_view_form" model="ir.ui.view">
+       <field name="name"> res_config_settings_custom_view_form </field>
+       <field name="model">res.config.settings</field>
+       <field name="priority" eval="15"/>
+       <field name="inherit_id" ref="base.res_config_settings_view_form"/>
+       <field name="arch" type="xml">
+           <xpath expr="//form" position="inside">
+               <app data-string="Access Management"
+                    string="Access Management" name="custom_model_access_management">
+                   <block title="Global Model Access" name="Chatter_Access_management">
+                       <setting id="is_export">
+                           <field name="is_export"/>
+                       </setting>
+                       <setting id="is_import">
+                           <field name="is_import"/>
+                       </setting>
+                       <setting id="is_addProperty">
+                           <field name="is_addProperty"/>
+                       </setting>
+                       <setting id="is_archive">
+                           <field name="is_archive"/>
+                       </setting>
+                       <setting id="is_duplicate">
+                           <field name="is_duplicate"/>
+                       </setting>
+                       <setting id="show_import">
+                           <field name="show_import"/>
+                       </setting>
+                   </block>
+                   <block title="Global  Chatter Access"   name="Access_management">
+                        <setting id="hide_chatter_section">
+                            <field name="hide_chatter_section"/>
+                        </setting>
+                        <setting  id="hide_send_mssge">
+                            <field name="hide_send_mssge"/>
+                        </setting>
+                        <setting id="hide_log_note" >
+                            <field name="hide_log_note"/>
+                        </setting>
+                        <setting id="hide_activities" >
+                            <field name="hide_activities"/>
+                        </setting>
+                        <setting id="hide_attachment" >
+                            <field name="hide_attachment"/>
+                        </setting>
+                        <setting id="hide_chatter_edit" >
+                            <field name="hide_chatter_edit"/>
+                        </setting>
+                        <setting id="hide_chatter_delete" >
+                            <field name="hide_chatter_delete"/>
+                        </setting>
+                   </block>
+               </app>
+           </xpath>
+       </field>
+   </record>
+
+    <record id="action_custom_model_access_management_settings" model="ir.actions.act_window">
+        <field name="name">Settings</field>
+        <field name="res_model">res.config.settings</field>
+        <field name="view_id" ref="res_config_settings_custom_view_form"/>
+        <field name="view_mode">form</field>
+        <field name="target">inline</field>
+        <field name="context">{'module' : 'custom_model_access_management'}</field>
+    </record>
+
+    <menuitem id="access_settings_menu"
+              parent="custom_model_access_management.access_right_main_menu"
+              name="Settings"
+              action="action_custom_model_access_management_settings"
+              sequence="7" groups="base.group_system"/>
+
+</odoo>
